@@ -9,3 +9,5 @@ This project is part of a broader effort to bridge the gap between theoretical c
 **Twitter:** @TheGab115965
 
 **GitHub:** [gabrxgomes](https://github.com/gabrxgomes)
+
+**Linkedin:** [Gabriel Gomes]([https://github.com/gabrxgome](https://www.linkedin.com/in/gabriel-gomes-641950163/)s)
