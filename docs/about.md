@@ -6,6 +6,4 @@ Five years of experience in software development, with a focus on backend system
 
 This project is part of a broader effort to bridge the gap between theoretical computer science and practical engineering.
 
-**Contact:** [@RetroDevdotcom](https://twitter.com/RetroDevdotcom)
-
 **GitHub:** [gabrxgomes](https://github.com/gabrxgomes)
