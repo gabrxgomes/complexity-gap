@@ -1,60 +1,60 @@
-# Metodologia
+# Methodology
 
-## Ambiente Controlado
+## Controlled Environment
 
-Todos os experimentos são executados em ambiente isolado com as seguintes garantias:
+All experiments are run in an isolated environment with the following guarantees:
 
-- Processo Python com prioridade elevada (`nice -n -10`)
-- Medição de tempo com `time.perf_counter()` (resolução sub-microsegundo)
-- Cada combinação (algoritmo × topologia × tamanho) executada **30 vezes**
-- Média, mediana, desvio padrão e percentis p5/p95 reportados
-- Semente aleatória fixada por experimento para reprodutibilidade
+- Python process with elevated priority (`nice -n -10`)
+- Time measured with `time.perf_counter()` (sub-microsecond resolution)
+- Each combination (algorithm × topology × size) executed **30 times**
+- Mean, median, standard deviation, and p5/p95 percentiles reported
+- Fixed random seed per experiment for reproducibility
 
-## Classes de Grafos
+## Graph Classes
 
 ### Erdős–Rényi G(n, p)
-Grafo aleatório onde cada aresta existe com probabilidade \(p\). Usado como baseline probabilístico.
+Random graph where each edge exists with probability \(p\). Used as a probabilistic baseline.
 
-Parâmetros: \(n \in \{100, 500, 1000, 5000\}\), \(p \in \{0.05, 0.1, 0.3\}\)
+Parameters: \(n \in \{100, 500, 1000, 5000\}\), \(p \in \{0.05, 0.1, 0.3\}\)
 
-### Grafo Esparso
-Grafo onde \(|E| = O(V)\). Gerado com modelo Barabási-Albert com \(m=2\).
+### Sparse Graph
+Graph where \(|E| = O(V)\). Generated with the Barabási-Albert model with \(m=2\).
 
-### Grafo Denso
-Grafo onde \(|E| = O(V^2)\). Erdős–Rényi com \(p > 0.5\).
+### Dense Graph
+Graph where \(|E| = O(V^2)\). Erdős–Rényi with \(p > 0.5\).
 
-### Grafo Planar
-Gerado via triangulação de Delaunay sobre pontos aleatórios no plano. Representa redes viárias e mapas.
+### Planar Graph
+Generated via Delaunay triangulation over random points in the plane. Represents road networks and maps.
 
-### Grade (Grid)
-Grafo \(\sqrt{n} \times \sqrt{n}\) com arestas nos 4 vizinhos. Estrutura regular, favorável ao A*.
+### Grid Graph
+\(\sqrt{n} \times \sqrt{n}\) graph with edges to 4 neighbors. Regular structure, favorable for A*.
 
-### Árvore
-Árvore geradora aleatória via algoritmo de Prüfer. Sem ciclos, estrutura hierárquica.
+### Tree
+Random spanning tree via Prüfer sequence algorithm. No cycles, hierarchical structure.
 
-## Métricas Coletadas
+## Collected Metrics
 
-| Métrica | Descrição | Unidade |
+| Metric | Description | Unit |
 |---|---|---|
-| `time_ms` | Tempo de execução real | ms |
-| `nodes_visited` | Nós expandidos/visitados | contagem |
-| `edges_relaxed` | Arestas processadas | contagem |
-| `memory_kb` | Pico de uso de memória | KB |
-| `path_length` | Comprimento do caminho encontrado | contagem |
-| `gap_ratio` | `time_ms / theoretical_ops` | adimensional |
+| `time_ms` | Real execution time | ms |
+| `nodes_visited` | Nodes expanded/visited | count |
+| `edges_relaxed` | Edges processed | count |
+| `memory_kb` | Peak memory usage | KB |
+| `path_length` | Length of found path | count |
+| `gap_ratio` | `time_ms / theoretical_ops` | dimensionless |
 
-## Cálculo do Gap
+## Gap Calculation
 
-A complexidade teórica é calculada como número de operações esperadas dado \(V\) e \(E\):
+Theoretical complexity is calculated as the expected number of operations given \(V\) and \(E\):
 
 \[
-\text{gap} = \frac{T_{real}(G)}{C_{teórico}(V, E)}
+\text{gap} = \frac{T_{real}(G)}{C_{theoretical}(V, E)}
 \]
 
-Onde \(C_{teórico}\) é a função de complexidade do algoritmo avaliada nos parâmetros reais do grafo.
+Where \(C_{theoretical}\) is the algorithm's complexity function evaluated at the actual graph parameters.
 
-## Análise Estatística
+## Statistical Analysis
 
-- Regressão linear entre `gap_ratio` e parâmetros estruturais do grafo (densidade, diâmetro, coeficiente de clustering)
-- ANOVA para comparação de gap entre topologias
-- Visualizações: boxplot por topologia, heatmap algoritmo × topologia, curvas de crescimento
+- Linear regression between `gap_ratio` and structural graph parameters (density, diameter, clustering coefficient)
+- ANOVA for gap comparison across topologies
+- Visualizations: boxplot by topology, algorithm × topology heatmap, growth curves

@@ -1,20 +1,13 @@
-/* Tipografia e refinamentos visuais */
 :root {
   --md-code-font: 'JetBrains Mono', monospace;
 }
-
-/* Cabeçalho da página home */
 .md-typeset h1 {
   font-weight: 800;
   letter-spacing: -0.03em;
 }
-
-/* Destaque em blocos de código */
 .highlight .hll {
   background-color: rgba(100, 255, 218, 0.08);
 }
-
-/* Badge de status da pesquisa */
 .research-badge {
   display: inline-block;
   padding: 2px 10px;
@@ -26,18 +19,7 @@
   border: 1px solid rgba(100, 255, 218, 0.3);
   margin-left: 8px;
 }
-
-/* Tabelas de resultados */
 .md-typeset table:not([class]) th {
   background-color: var(--md-primary-fg-color);
   color: var(--md-primary-bg-color);
-}
-
-/* Equações em destaque */
-.math-block {
-  padding: 1rem;
-  border-left: 3px solid var(--md-accent-fg-color);
-  background: var(--md-code-bg-color);
-  border-radius: 0 4px 4px 0;
-  margin: 1rem 0;
 }

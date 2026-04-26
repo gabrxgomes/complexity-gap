@@ -1,38 +1,38 @@
 # Complexity Gap
 
-<span class="research-badge">Em andamento</span>
+<span class="research-badge">In progress</span>
 
-> **Pergunta central:** A complexidade assintótica descreve o comportamento teórico no limite, mas quanto ela diverge do tempo real em grafos com estruturas distintas?
+> **Core question:** Asymptotic complexity describes theoretical behavior at the limit — but how far does it diverge from real-world performance across different graph structures?
 
 ---
 
-## O que é esta pesquisa
+## What this research is about
 
-Este projeto investiga empiricamente o **gap entre complexidade teórica e desempenho real** de algoritmos de busca em grafos, variando sistematicamente a topologia dos grafos testados.
+This project empirically investigates the **gap between theoretical complexity and real performance** of graph search algorithms, systematically varying the topology of the tested graphs.
 
-Algoritmos analisados:
+Algorithms analyzed:
 
-| Algoritmo | Complexidade Teórica |
+| Algorithm | Theoretical Complexity |
 |---|---|
 | BFS | \(O(V + E)\) |
 | DFS | \(O(V + E)\) |
 | Dijkstra | \(O((V + E) \log V)\) |
-| A* | \(O(E \log V)\) no pior caso |
-| Busca Bidirecional | \(O(b^{d/2})\) |
+| A* | \(O(E \log V)\) worst case |
+| Bidirectional Search | \(O(b^{d/2})\) |
 
-Topologias testadas: aleatória (Erdős–Rényi), esparsa, densa, planar, grade (grid) e árvore.
-
----
-
-## Contribuição
-
-A literatura apresenta complexidades assintóticas bem estabelecidas, mas poucos trabalhos medem sistematicamente como a **estrutura topológica** do grafo afeta o desvio entre o comportamento teórico e o observado. Esta pesquisa constrói um modelo empírico desse desvio.
+Topologies tested: random (Erdős–Rényi), sparse, dense, planar, grid, and tree.
 
 ---
 
-## Reprodutibilidade
+## Contribution
 
-Todo o código, dados e experimentos estão disponíveis no repositório GitHub. Para reproduzir:
+The literature provides well-established asymptotic complexities, but few works systematically measure how **graph topology** affects the deviation between theoretical and observed behavior. This research builds an empirical model of that deviation.
+
+---
+
+## Reproducibility
+
+All code, data, and experiments are available in the GitHub repository. To reproduce:
 
 ```bash
 git clone https://github.com/gabrxgomes/complexity-gap
@@ -45,9 +45,9 @@ python experiments/run_all.py
 
 ## Status
 
-- [x] Estrutura do projeto
-- [ ] Implementação dos algoritmos
-- [ ] Geração das topologias de grafo
-- [ ] Pipeline de experimentos
-- [ ] Análise do gap
-- [ ] Artigo completo
+- [x] Project structure
+- [ ] Algorithm implementation
+- [ ] Graph topology generators
+- [ ] Experiment pipeline
+- [ ] Gap analysis
+- [ ] Full paper

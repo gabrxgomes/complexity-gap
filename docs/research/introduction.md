@@ -1,30 +1,30 @@
-# Introdução
+# Introduction
 
-## Motivação
+## Motivation
 
-Algoritmos de busca em grafos são peças centrais de sistemas reais: roteamento GPS, redes sociais, compiladores, sistemas de recomendação. A análise de complexidade fornece garantias teóricas sobre seu comportamento assintótico, mas o desempenho observado em prática depende fortemente da **estrutura topológica** do grafo de entrada.
+Graph search algorithms are central components of real-world systems: GPS routing, social networks, compilers, recommendation engines. Complexity analysis provides theoretical guarantees about asymptotic behavior, but observed performance in practice depends heavily on the **topological structure** of the input graph.
 
-Um grafo esparso e um grafo denso com o mesmo número de vértices \(V\) têm comportamentos radicalmente diferentes na prática, mesmo que a fórmula \(O(V + E)\) os trate de forma similar na análise assintótica.
+A sparse graph and a dense graph with the same number of vertices \(V\) behave radically differently in practice, even though \(O(V + E)\) treats them similarly in asymptotic analysis.
 
-## Pergunta de Pesquisa
+## Research Question
 
-> **Como a topologia do grafo afeta o gap entre a complexidade teórica e o desempenho real (tempo de execução, nós expandidos, uso de memória) dos principais algoritmos de busca?**
+> **How does graph topology affect the gap between theoretical complexity and real performance (execution time, nodes expanded, memory usage) of the main search algorithms?**
 
-## Hipóteses
+## Hypotheses
 
-**H1:** Algoritmos com mesma complexidade assintótica apresentam gaps distintos em função da topologia do grafo.
+**H1:** Algorithms with the same asymptotic complexity exhibit distinct gaps depending on graph topology.
 
-**H2:** A razão \(\frac{T_{real}}{T_{teórico}(V, E)}\) não é constante entre topologias, indicando que a constante oculta no Big O varia estruturalmente.
+**H2:** The ratio \(\frac{T_{real}}{T_{theoretical}(V, E)}\) is not constant across topologies, indicating that the hidden constant in Big O varies structurally.
 
-**H3:** A* apresenta menor gap em grafos com estrutura espacial (grade, planar) em relação a grafos aleatórios.
+**H3:** A* shows a smaller gap on spatially structured graphs (grid, planar) compared to random graphs.
 
-## Contribuições Esperadas
+## Expected Contributions
 
-1. Modelo empírico do gap por topologia para cada algoritmo
-2. Ranking de algoritmos por topologia de grafo com base em desempenho real
-3. Conjunto de dados aberto com resultados reproduzíveis
-4. Recomendações práticas de escolha de algoritmo por tipo de grafo
+1. Empirical gap model per topology for each algorithm
+2. Algorithm ranking by graph topology based on real performance
+3. Open dataset with reproducible results
+4. Practical recommendations for algorithm selection by graph type
 
-## Escopo
+## Scope
 
-Esta pesquisa cobre **busca de caminho** (path search) e **busca em largura/profundidade** em grafos não direcionados e direcionados com pesos não negativos. Não cobre algoritmos de fluxo máximo, matching ou problemas NP-completos.
+This research covers **path search** and **breadth/depth-first search** on undirected and directed graphs with non-negative weights. It does not cover maximum flow, matching algorithms, or NP-complete problems.

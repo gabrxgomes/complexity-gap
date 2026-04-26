@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# MkDocs
+site/
+
+# Dados temporários
+experiments/raw/
+experiments/tmp/
+
+# Anotações pessoais (ignoradas do repo)
+notes/
+TODO.md
+scratch/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Profiling
+*.prof
+*.lprof

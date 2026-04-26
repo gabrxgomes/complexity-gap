@@ -1,5 +1,5 @@
 site_name: Complexity Gap
-site_description: Pesquisa empírica sobre o gap entre complexidade teórica e desempenho real em algoritmos de busca
+site_description: Empirical research on the gap between theoretical complexity and real performance of graph search algorithms
 site_author: Gabriel
 site_url: https://gabrxgomes.github.io/complexity-gap
 
@@ -8,20 +8,19 @@ repo_url: https://github.com/gabrxgomes/complexity-gap
 
 theme:
   name: material
-  language: pt
   palette:
     - scheme: slate
       primary: deep purple
       accent: cyan
       toggle:
         icon: material/brightness-4
-        name: Modo claro
+        name: Light mode
     - scheme: default
       primary: deep purple
       accent: cyan
       toggle:
         icon: material/brightness-7
-        name: Modo escuro
+        name: Dark mode
   font:
     text: JetBrains Mono
     code: JetBrains Mono
@@ -66,22 +65,22 @@ extra_css:
 
 nav:
   - Home: index.md
-  - Pesquisa:
-    - Introdução: research/introduction.md
-    - Fundamentação Teórica: research/theory.md
-    - Metodologia: research/methodology.md
-    - Experimentos: research/experiments.md
-    - Análise do Gap: research/gap-analysis.md
-    - Conclusão: research/conclusion.md
-  - Código:
-    - Visão Geral: code/overview.md
-    - Geradores de Grafo: code/graph-generators.md
-    - Algoritmos: code/algorithms.md
-    - Pipeline de Experimentos: code/pipeline.md
-  - Resultados:
-    - Tabelas: results/tables.md
-    - Gráficos: results/charts.md
-  - Sobre: about.md
+  - Research:
+    - Introduction: research/introduction.md
+    - Theoretical Background: research/theory.md
+    - Methodology: research/methodology.md
+    - Experiments: research/experiments.md
+    - Gap Analysis: research/gap-analysis.md
+    - Conclusion: research/conclusion.md
+  - Code:
+    - Overview: code/overview.md
+    - Graph Generators: code/graph-generators.md
+    - Algorithms: code/algorithms.md
+    - Experiment Pipeline: code/pipeline.md
+  - Results:
+    - Tables: results/tables.md
+    - Charts: results/charts.md
+  - About: about.md
 
 extra:
   social:

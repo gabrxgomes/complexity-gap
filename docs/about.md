@@ -1,5 +1,11 @@
-# Sobre
+# About
 
-Pesquisa independente conduzida por Gabriel, Analista de Requisitos e estudante de Ciência da Computação na FMU (São Paulo).
+Independent research conducted by Gabriel, Requirements Analyst and Computer Science student at FMU (São Paulo, Brazil).
 
-Contato: [@RetroDevdotcom](https://twitter.com/RetroDevdotcom)
+Five years of experience in software development, with a focus on backend systems, REST API integrations, and automation.
+
+This project is part of a broader effort to bridge the gap between theoretical computer science and practical engineering.
+
+**Contact:** [@RetroDevdotcom](https://twitter.com/RetroDevdotcom)
+
+**GitHub:** [gabrxgomes](https://github.com/gabrxgomes)
