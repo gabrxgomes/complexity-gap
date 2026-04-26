@@ -1,0 +1,91 @@
+site_name: Complexity Gap
+site_description: Pesquisa empírica sobre o gap entre complexidade teórica e desempenho real em algoritmos de busca
+site_author: Gabriel
+site_url: https://gabrxgomes.github.io/complexity-gap
+
+repo_name: complexity-gap
+repo_url: https://github.com/gabrxgomes/complexity-gap
+
+theme:
+  name: material
+  language: pt
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Modo claro
+    - scheme: default
+      primary: deep purple
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Modo escuro
+  font:
+    text: JetBrains Mono
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - tags
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Pesquisa:
+    - Introdução: research/introduction.md
+    - Fundamentação Teórica: research/theory.md
+    - Metodologia: research/methodology.md
+    - Experimentos: research/experiments.md
+    - Análise do Gap: research/gap-analysis.md
+    - Conclusão: research/conclusion.md
+  - Código:
+    - Visão Geral: code/overview.md
+    - Geradores de Grafo: code/graph-generators.md
+    - Algoritmos: code/algorithms.md
+    - Pipeline de Experimentos: code/pipeline.md
+  - Resultados:
+    - Tabelas: results/tables.md
+    - Gráficos: results/charts.md
+  - Sobre: about.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/gabrxgomes
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/RetroDevdotcom

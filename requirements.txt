@@ -1,0 +1,9 @@
+# Pesquisa
+networkx>=3.3
+numpy>=1.26
+pandas>=2.2
+matplotlib>=3.8
+seaborn>=0.13
+scipy>=1.13
+memory-profiler>=0.61
+tqdm>=4.66
